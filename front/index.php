@@ -1,32 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link href="css/style.css" rel="stylesheet">
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Tim
+ * Date: 09/11/15
+ * Time: 08:45
+ */
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+//Require functions, la page php où sont stocké toutes les fonctions
 
-    <title>Netfriends Yeah</title>
-</head>
+require("functions.php");
+require('header.php');
+require('config.php');
 
-<body>
 
-<header>
 
-    <div class="logo">
-        <img src="blabla" alt="">
-    </div>
+// Empty pour n'envoyer des commentaires à la bdd que si $errors est vide !
 
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Log Out</a></li>
-    </ul>
+if(!empty($_POST['submit'])) {
+    $id_post = $_POST['id_post'];
+    $auteur = $_POST['auteur'];
+    $message = $_POST['commentaire'];
+    $errors = [];
 
-</header>
+    if(empty($message)) {
+        $errors = "Message requis !";
+    }
+    if(empty($auteur)) {
+        $errors = "Auteur requis !";
+    }
+
+    if(empty($errors)) {
+        addComment($bdd, $id_post, $auteur, $message);
+    }
+}
+
+// Empty pour n'envoyer des posts à la bdd que si $errors est vide !
+
+
+if(!empty($_POST['submitpost'])) {
+    $titre = $_POST['titre'];
+    $contenu = $_POST['contenu'];
+    $errors = [];
+
+    if(empty($contenu)) {
+        $errors = "Message requis !";
+    }
+    if(empty($titre)) {
+        $errors = "Titre requis !";
+    }
+
+    if(empty($errors)) {
+        addPost($bdd, $titre, $contenu);
+    }
+}
+
+?>
 <!--MODAL-->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">

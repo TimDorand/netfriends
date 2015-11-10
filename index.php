@@ -11,6 +11,7 @@
 
 require("functions.php");
 require('header.php');
+require('config.php');
 
 
 
@@ -30,10 +31,12 @@ if(!empty($_POST['submit'])) {
     }
 
     if(empty($errors)) {
-        $bdd = new PDO('mysql:host=localhost;dbname=netfriends;charset=utf8', 'root', 'root');
         addComment($bdd, $id_post, $auteur, $message);
     }
 }
+
+// Empty pour n'envoyer des posts à la bdd que si $errors est vide !
+
 
 if(!empty($_POST['submitpost'])) {
     $titre = $_POST['titre'];
@@ -48,7 +51,6 @@ if(!empty($_POST['submitpost'])) {
     }
 
     if(empty($errors)) {
-        $bdd = new PDO('mysql:host=localhost;dbname=netfriends;charset=utf8', 'root', 'root');
         addPost($bdd, $titre, $contenu);
     }
 }
