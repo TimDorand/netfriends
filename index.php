@@ -91,15 +91,6 @@ if(!empty($_POST['submitpost'])) {
 print_r($errors);
     echo '</p>';
 
-// Connexion à la base de données
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=netfriends;charset=utf8', 'root', 'root');
-}
-catch(Exception $e)
-{
-    die('Erreur : '.$e->getMessage());
-}
 
 // On récupère les 5 derniers posts
 $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 10');

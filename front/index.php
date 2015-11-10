@@ -77,9 +77,20 @@ if(!empty($_POST['submitpost'])) {
 
 <!--FIN MODAL-->
 
-<div class="sidebar">
-    <p>Coucou</p>
+<div class="sidebar" style="padding:30px">
+    <div class="caption form-group">
+        <h2>Write a new post</h2>
+        <form method="POST" action="">
+            <label>Pseudo</label>
+            <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
+            <label>Content</label>
+            <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px"></textarea><br/>
+            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
+
+        </form>
+    </div>
 </div>
+
 
 
 
