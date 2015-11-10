@@ -56,28 +56,9 @@ if(!empty($_POST['submitpost'])) {
 }
 
 ?>
-<!--MODAL-->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    <p>One fine body&hellip;</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
-<!--FIN MODAL-->
 
-<div class="sidebar" style="padding:30px">
+<div class="sidebar" style="padding:15px">
     <div class="caption form-group">
         <h2>Write a new post</h2>
         <form method="POST" action="">
@@ -93,24 +74,111 @@ if(!empty($_POST['submitpost'])) {
 
 
 
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Feed NetFriends</h1>
+    </div>
+<!--Display des errors-->
+        <?php
+        if (!empty($errors)) {
+            echo "<p class=\"bg-danger\" style=\"padding:5px\">";
+            print_r($errors);
+        }elseif(!empty($_POST['submit'])) {
+
+            echo "<p class=\"bg-success\" style=\"padding:5px\">Succès !";
+        }    echo '</p>';
+
+
+
+        // On récupère les 5 derniers posts
+        $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 10');
+
+        // Boucle pour récupérer les posts
+        while ($donnees = $req->fetch())
+        {
+        ?>
 
 <div class="row">
     <div class="col-sm-10 col-md-10 col-md-offset-1">
         <div class="thumbnail">
-            <img src="..." alt="...">
             <div class="caption">
-                <h3>Article 1</h3>
-                <p>...</p>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add comment</button> <button type="button" class="btn btn-default">Show comments</button>
+                <h3><?php echo htmlspecialchars($donnees['titre']); ?></h3>
+                <p>le <?php echo $donnees['date_creation_fr']; ?></p>
+                <p><?php echo $donnees['contenu']; ?></p>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add comment</button>
+<!--                <button type="button" class="btn btn-default ">Show comments</button>-->
+                <div class=" btn btn-default flip">Show comments</div>
 
+                <div class="write">
+
+        <hr/>
+
+
+    <?php
+    // Récupération des commentaires
+    $req1 = $bdd->prepare('SELECT auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_commentaire_fr FROM comments WHERE id_billet = ? ORDER BY date_commentaire');
+    $req1->execute(array($donnees['id']));
+
+    //Boucle des commentaires
+    while ($donnees1 = $req1->fetch())
+    {
+        ?>
+
+<p><strong><?php echo htmlspecialchars($donnees1['auteur']); ?></strong> le <?php echo $donnees1['date_commentaire_fr']; ?></p>
+<p><?php echo nl2br(htmlspecialchars($donnees1['commentaire'])); ?></p>
+
+
+
+    <?php
+        } // Fin de la boucle des commentaires
+        $req1->closeCursor();
+    ?>
+
+        </div><!--Referme la div de tous les commentaires-->
             </div>
         </div>
+
+        <!--ADD COMMENTAIRES POPUP MODAL-->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Add a comment</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="">
+                            <label>Auteur</label>
+                            <input class="form-control" type="text" name="auteur" placeholder="Auteur" /><br/>
+                            <label>Content</label>
+                            <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
+                            <input type="hidden" value="<?php echo $donnees['id']; ?>" name="id_post">
+                            <input class="form-control btn-primary" type="submit" name="submit" value="Envoyer" />
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!--FIN MODAL-->
+
     </div>
 
+    </div>
+
+    <?php
+    } // Fin de la boucle des posts
+    $req->closeCursor();
+    ?>
+
+
 </div>
-
-
-
 
 
 
@@ -120,8 +188,15 @@ if(!empty($_POST['submitpost'])) {
 </body>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $(".flip").on("click",function(){
+                    $(this).next().slideToggle();
+                });
+            });
+        </script>
 
 </html>

@@ -84,12 +84,16 @@ if(!empty($_POST['submitpost'])) {
 
 
     </div>
-    <p class="bg-danger" style="padding:5px">
 
 <?php
 
-print_r($errors);
-    echo '</p>';
+if (!empty($errors)) {
+    echo "<p class=\"bg-danger\" style=\"padding:5px\">";
+    print_r($errors);
+}elseif(!empty($_POST['submit'])) {
+
+    echo "<p class=\"bg-success\" style=\"padding:5px\">Succès !";
+}    echo '</p>';
 
 
 // On récupère les 5 derniers posts
@@ -112,7 +116,7 @@ while ($donnees = $req->fetch())
                 <hr>
 
                 <div class="flip">Show comments</div>
-                <div class="write">
+                <div class="write caption">
 
 <?php
         // Récupération des commentaires
