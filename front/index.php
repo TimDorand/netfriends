@@ -58,23 +58,10 @@ if(!empty($_POST['submitpost'])) {
 ?>
 
 
-<div class="sidebar" style="padding:15px">
-    <div class="caption form-group">
-        <h2>Write a new post</h2>
-        <form method="POST" action="">
-            <label>Pseudo</label>
-            <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
-            <label>Content</label>
-            <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px"></textarea><br/>
-            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
-
-        </form>
-    </div>
-</div>
 
 
 
-<div class="container-fluid">
+<div class="col-md-8">
     <div class="page-header">
         <h1>Feed NetFriends</h1>
     </div>
@@ -94,17 +81,16 @@ if(!empty($_POST['submitpost'])) {
         $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 10');
 
         // Boucle pour récupérer les posts
-        while ($donnees = $req->fetch())
+        while ($post = $req->fetch())
         {
         ?>
 
-<div class="row">
-    <div class="col-sm-10 col-md-10 col-md-offset-1">
+    <div class="col-md-12">
         <div class="thumbnail">
             <div class="caption">
-                <h3><?php echo htmlspecialchars($donnees['titre']); ?></h3>
-                <p>le <?php echo $donnees['date_creation_fr']; ?></p>
-                <p><?php echo $donnees['contenu']; ?></p>
+                <h3><?php echo htmlspecialchars($post['titre']); ?></h3>
+                <p>le <?php echo $post['date_creation_fr']; ?></p>
+                <p><?php echo $post['contenu']; ?></p>
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add comment</button>
 <!--                <button type="button" class="btn btn-default ">Show comments</button>-->
                 <div class=" btn btn-default flip">Show comments</div>
@@ -116,18 +102,37 @@ if(!empty($_POST['submitpost'])) {
 
     <?php
     // Récupération des commentaires
-    $req1 = $bdd->prepare('SELECT auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_commentaire_fr FROM comments WHERE id_billet = ? ORDER BY date_commentaire');
-    $req1->execute(array($donnees['id']));
+    $req1 = $bdd->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_commentaire_fr FROM comments WHERE id_billet = ? ORDER BY date_commentaire');
+    $req1->execute(array($post['id']));
 
     //Boucle des commentaires
-    while ($donnees1 = $req1->fetch())
+    while ($comment = $req1->fetch())
     {
         ?>
 
-<p><strong><?php echo htmlspecialchars($donnees1['auteur']); ?></strong> le <?php echo $donnees1['date_commentaire_fr']; ?></p>
-<p><?php echo nl2br(htmlspecialchars($donnees1['commentaire'])); ?></p>
+<p><strong><?php echo htmlspecialchars($comment['auteur']); ?></strong> le <?php echo $comment['date_commentaire_fr']; ?></p>
+<p><?php echo nl2br(htmlspecialchars($comment['commentaire'])); ?></p>
+
+        <?php
+        // Récupération des réponse
+        $req2 = $bdd->prepare('SELECT auteur, reponse, DATE_FORMAT(date_reponse, \'%d/%m/%Y\') AS date_reponse_fr FROM reply WHERE id_comments = ? ORDER BY date_reponse');
+        $req2->execute(array($comment['id']));
+
+        //Boucle des commentaires
+        while ($reply = $req2->fetch())
+        {
+            ?>
+
+<div class="reply">
+            <p><strong><?php echo htmlspecialchars($reply['auteur']); ?></strong> le <?php echo $reply['date_reponse_fr']; ?></p>
+            <p><?php echo nl2br(htmlspecialchars($reply['reponse'])); ?></p>
+</div>
 
 
+            <?php
+        } // Fin de la boucle des commentaires
+        $req2->closeCursor();
+        ?>
 
     <?php
         } // Fin de la boucle des commentaires
@@ -152,7 +157,7 @@ if(!empty($_POST['submitpost'])) {
                             <input class="form-control" type="text" name="auteur" placeholder="Auteur" /><br/>
                             <label>Content</label>
                             <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
-                            <input type="hidden" value="<?php echo $donnees['id']; ?>" name="id_post">
+                            <input type="hidden" value="<?php echo $post['id']; ?>" name="id_post">
                             <input class="form-control btn-primary" type="submit" name="submit" value="Envoyer" />
                         </form>
 
@@ -170,7 +175,6 @@ if(!empty($_POST['submitpost'])) {
 
     </div>
 
-    </div>
 
     <?php
     } // Fin de la boucle des posts
@@ -178,6 +182,21 @@ if(!empty($_POST['submitpost'])) {
     ?>
 
 
+</div>
+
+
+<div class="col-md-3 sidebar" data-spy="affix" data-offset-top="200" style="padding:15px">
+    <div class="caption form-group">
+        <h2>Write a new post</h2>
+        <form method="POST" action="">
+            <label>Pseudo</label>
+            <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
+            <label>Content</label>
+            <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px"></textarea><br/>
+            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
+
+        </form>
+    </div>
 </div>
 
 
