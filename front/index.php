@@ -17,7 +17,7 @@ require('config.php');
 
 // Empty pour n'envoyer des commentaires à la bdd que si $errors est vide !
 
-if(!empty($_POST['submit'])) {
+if(!empty($_POST['submitcomm'])) {
     $id_post = $_POST['id_post'];
     $auteur = $_POST['auteur'];
     $message = $_POST['commentaire'];
@@ -55,7 +55,7 @@ if(!empty($_POST['submitpost'])) {
     }
 }
 
-// Empty pour n'envoyer des commentaires à la bdd que si $errors est vide !
+// Empty pour n'envoyer des réponses à la bdd que si $errors est vide !
 
 if(!empty($_POST['submit'])) {
     $id_comments = $_POST['id_comments'];
@@ -163,10 +163,10 @@ if(!empty($_POST['submit'])) {
             <input class="form-horizontal" type="text"  name="interloc" placeholder="Author" /><br/>
             <input class="form-horizontal" type="text" size="70" name="reponse" placeholder="Can you reply ?" /><br/>
             <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
-            <input class="btn-primary" type="submit" name="submit" value="Envoyer" />
+            <input class=" btn-primary" type="submit" name="submit" value="Envoyer" />
         </form>
 
-        
+
     <?php
         } // Fin de la boucle des commentaires
         $req1->closeCursor();
@@ -191,7 +191,7 @@ if(!empty($_POST['submit'])) {
                             <label>Content</label>
                             <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
                             <input type="hidden" value="<?php echo $post['id']; ?>" name="id_post">
-                            <input class="form-control btn-primary" type="submit" name="submit" value="Envoyer" />
+                            <input class="form-control btn-primary" type="submit" name="submitcomm" value="Envoyer" />
                         </form>
 
                     </div>
