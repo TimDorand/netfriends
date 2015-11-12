@@ -27,4 +27,14 @@ function addPost($bdd, $titre, $contenu) {
     return $reqpost;
 }
 
+//Ajout d'une réponse dans la base de donnée
+
+function addReply($bdd, $id_comments, $interloc, $reponse) {
+
+    $reqrep = $bdd->prepare("INSERT INTO reply(id_comments, interloc, reponse) VALUES ('$id_comments ','$interloc ',' $reponse') ");
+    $reqrep->execute(array($id_comments, $interloc, $reponse));
+
+    return $reqrep;
+}
+
 

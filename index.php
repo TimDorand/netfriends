@@ -5,6 +5,11 @@
  * Date: 09/11/15
  * Time: 08:45
  */
+/*ATTENTION*/
+// --> FRONT
+
+//Style fait dans le dossier front (rendu)
+header('location:front/index.php');
 
 
 //Require functions, la page php où sont stocké toutes les fonctions

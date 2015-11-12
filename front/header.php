@@ -17,7 +17,7 @@
 <header>
 
     <div class="logo">
-        <img src="logochat.png" width="30"  alt="">
+        <a href="index.php"> <img src="logochat.png" width="30"  alt=""></a>
     </div>
 
     <ul class="nav nav-pills">

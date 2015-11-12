@@ -55,6 +55,26 @@ if(!empty($_POST['submitpost'])) {
     }
 }
 
+// Empty pour n'envoyer des commentaires à la bdd que si $errors est vide !
+
+if(!empty($_POST['submit'])) {
+    $id_comments = $_POST['id_comments'];
+    $interloc = $_POST['interloc'];
+    $reponse = $_POST['reponse'];
+    $errors = [];
+
+    if(empty($reponse)) {
+        $errors = "Interlocuteur requis !";
+    }
+    if(empty($interloc)) {
+        $errors = "Réponse requise !";
+    }
+
+    if(empty($errors)) {
+        addReply($bdd, $id_comments, $interloc, $reponse);
+    }
+}
+
 ?>
 
 
@@ -85,6 +105,7 @@ if(!empty($_POST['submitpost'])) {
         {
         ?>
 
+            <!--SHOW POSTS-->
     <div class="col-md-12">
         <div class="thumbnail">
             <div class="caption">
@@ -109,31 +130,43 @@ if(!empty($_POST['submitpost'])) {
     while ($comment = $req1->fetch())
     {
         ?>
-
+<!--SHOW COMMENTS-->
 <p><strong><?php echo htmlspecialchars($comment['auteur']); ?></strong> le <?php echo $comment['date_commentaire_fr']; ?></p>
 <p><?php echo nl2br(htmlspecialchars($comment['commentaire'])); ?></p>
 
         <?php
         // Récupération des réponse
-        $req2 = $bdd->prepare('SELECT auteur, reponse, DATE_FORMAT(date_reponse, \'%d/%m/%Y\') AS date_reponse_fr FROM reply WHERE id_comments = ? ORDER BY date_reponse');
+        $req2 = $bdd->prepare('SELECT interloc, reponse, DATE_FORMAT(date_reponse, \'%d/%m/%Y\') AS date_reponse_fr FROM reply WHERE id_comments = ? ORDER BY date_reponse');
         $req2->execute(array($comment['id']));
 
-        //Boucle des commentaires
+        //Boucle des réponses
         while ($reply = $req2->fetch())
         {
             ?>
 
+            <!--SHOW REPLY-->
 <div class="reply">
-            <p><strong><?php echo htmlspecialchars($reply['auteur']); ?></strong> le <?php echo $reply['date_reponse_fr']; ?></p>
+            <p><strong><?php echo htmlspecialchars($reply['interloc']); ?></strong> le <?php echo $reply['date_reponse_fr']; ?></p>
             <p><?php echo nl2br(htmlspecialchars($reply['reponse'])); ?></p>
+
 </div>
+
 
 
             <?php
         } // Fin de la boucle des commentaires
         $req2->closeCursor();
         ?>
+        <!--ADD REPLY--><br/>
+        <form class="reply" method="POST" action="">
+            <label>Reply</label><br/>
+            <input class="form-horizontal" type="text"  name="interloc" placeholder="Author" /><br/>
+            <input class="form-horizontal" type="text" size="70" name="reponse" placeholder="Can you reply ?" /><br/>
+            <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
+            <input class="btn-primary" type="submit" name="submit" value="Envoyer" />
+        </form>
 
+        
     <?php
         } // Fin de la boucle des commentaires
         $req1->closeCursor();
