@@ -51,30 +51,35 @@ if(!empty($_POST['submitpost'])) {
     }
 
     if(empty($errors)) {
-        addPost($bdd, $titre, $contenu);
+         addPost($bdd, $titre, $contenu);
+    }
+}
+
+// Si le submit de la REPONSE n'est pas vide, alors on affice la fonction d'ajout de reponse
+
+if(!empty($_POST['submitrep'])) {
+    $id_comment = $_POST['id_comment'];
+    $auteur = $_POST['auteur'];
+    $message = $_POST['message'];
+    $errors = [];
+
+    if(empty($message)) {
+        $errors = "Message requis !";
+    }
+    if(empty($auteur)) {
+        $errors = "Auteur requis !";
+    }
+
+    if(empty($errors)) {
+        reply($bdd, $id_comment, $auteur, $message);
     }
 }
 
 ?>
 
 
-<div class="sidebar" style="padding:15px">
-    <div class="caption form-group">
-        <h2>Write a new post</h2>
-        <form method="POST" action="">
-            <label>Pseudo</label>
-            <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
-            <label>Content</label>
-            <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px"></textarea><br/>
-            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
 
-        </form>
-    </div>
-</div>
-
-
-
-<div class="container-fluid">
+<div class="col-md-7">
     <div class="page-header">
         <h1>Feed NetFriends</h1>
     </div>
@@ -90,49 +95,76 @@ if(!empty($_POST['submitpost'])) {
 
 
 
-        // On récupère les 5 derniers posts
+        // On récupère les derniers POSTS avec REQ
+
         $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin\') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 10');
 
-        // Boucle pour récupérer les posts
-        while ($donnees = $req->fetch())
+        // Boucle pour récupérer les posts POST
+
+        while ($post = $req->fetch())
         {
         ?>
 
-<div class="row">
-    <div class="col-sm-10 col-md-10 col-md-offset-1">
+    <div class="col-md-12">
         <div class="thumbnail">
             <div class="caption">
-                <h3><?php echo htmlspecialchars($donnees['titre']); ?></h3>
-                <p>le <?php echo $donnees['date_creation_fr']; ?></p>
-                <p><?php echo $donnees['contenu']; ?></p>
+                <h3><?php echo htmlspecialchars($post['titre']); ?></h3>
+                <p>le <?php echo $post['date_creation_fr']; ?></p>
+                <p><?php echo $post['contenu']; ?></p>
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add comment</button>
 <!--                <button type="button" class="btn btn-default ">Show comments</button>-->
                 <div class=" btn btn-default flip">Show comments</div>
 
                 <div class="write">
+                <hr/>
 
-        <hr/>
+            <?php
 
+            // Récupération des COMMENTAIRES en fonction de l'id de l'article avec REQ1
 
-    <?php
-    // Récupération des commentaires
-    $req1 = $bdd->prepare('SELECT auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_commentaire_fr FROM comments WHERE id_billet = ? ORDER BY date_commentaire');
-    $req1->execute(array($donnees['id']));
+            $req1 = $bdd->prepare('SELECT id, auteur, commentaire, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_commentaire_fr FROM comments WHERE id_billet = ? ORDER BY date_commentaire');
+            $req1->execute(array($post['id']));
 
-    //Boucle des commentaires
-    while ($donnees1 = $req1->fetch())
-    {
-        ?>
+            //Boucle des commentaires  COMMENT
 
-<p><strong><?php echo htmlspecialchars($donnees1['auteur']); ?></strong> le <?php echo $donnees1['date_commentaire_fr']; ?></p>
-<p><?php echo nl2br(htmlspecialchars($donnees1['commentaire'])); ?></p>
+            while ($comment = $req1->fetch())
+            {
+                ?>
 
+                <p><strong><?php echo htmlspecialchars($comment['auteur']); ?></strong> le <?php echo $comment['date_commentaire_fr']; ?></p>
+                <p><?php echo nl2br(htmlspecialchars($comment['commentaire'])); ?></p>
 
+                <?php
 
-    <?php
-        } // Fin de la boucle des commentaires
-        $req1->closeCursor();
-    ?>
+                // Récupération des REPONSES en fonction de l'id du commentaire avec la requete reqAffReply
+
+                $reqaffreply = $bdd->prepare('SELECT auteur, reponse, DATE_FORMAT(date_commentaire, \'%d/%m/%Y\') AS date_reponse_fr FROM reply WHERE id_comments = ? ORDER BY date_reponse');
+                $reqaffreply->execute(array($comment['id']));
+
+                //Boucle des REPONSES REQREPLY
+
+                while ($reqreply = $reqaffreply->fetch()) {
+                    ?>
+
+                    <p><strong><?php echo htmlspecialchars($reqreply['auteur']); ?></strong>le <?php echo $reqreply['date_commentaire_fr']; ?></p>
+                    <p><?php echo nl2br(htmlspecialchars($reqreply['commentaire'])); ?></p>
+
+                    <form method="POST" action="">
+                        <label>Auteur</label>
+                        <input class="form-control" type="text" name="auteur" placeholder="Auteur" /><br/>
+                        <label>Content</label>
+                        <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
+                        <input type="hidden" value="<?php echo $reqreply['id']; ?>" name="id_post">
+                        <input class="form-control btn-primary" type="submit" name="submit" value="Envoyer" />
+                    </form>
+
+                    <?php
+                    } // Fin de la boucle des réponses
+                    $reqaffreply->closeCursor();
+
+                } // Fin de la boucle des commentaires
+                $req1->closeCursor();
+            ?>
 
         </div><!--Referme la div de tous les commentaires-->
             </div>
@@ -144,7 +176,7 @@ if(!empty($_POST['submitpost'])) {
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Add a comment</h4>
+                        <h4 class="modal-title">Add a comment<?php echo $post['id']; ?></h4>
                     </div>
                     <div class="modal-body">
                         <form method="POST" action="">
@@ -152,7 +184,7 @@ if(!empty($_POST['submitpost'])) {
                             <input class="form-control" type="text" name="auteur" placeholder="Auteur" /><br/>
                             <label>Content</label>
                             <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
-                            <input type="hidden" value="<?php echo $donnees['id']; ?>" name="id_post">
+                            <input type="hidden" value="<?php echo $post['id']; ?>" name="id_post">
                             <input class="form-control btn-primary" type="submit" name="submit" value="Envoyer" />
                         </form>
 
@@ -170,7 +202,7 @@ if(!empty($_POST['submitpost'])) {
 
     </div>
 
-    </div>
+
 
     <?php
     } // Fin de la boucle des posts
@@ -179,7 +211,19 @@ if(!empty($_POST['submitpost'])) {
 
 
 </div>
+<div data-spy="affix" data-offset-top="200" class="col-md-4 sidebar">
+    <div class="caption form-group">
+        <h2>Write a new post</h2>
+        <form method="POST" action="">
+            <label>Pseudo</label>
+            <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
+            <label>Content</label>
+            <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z ])(?!.*\s).*$"></textarea><br/>
+            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
 
+        </form>
+    </div>
+</div>
 
 
 <footer>
@@ -198,5 +242,16 @@ if(!empty($_POST['submitpost'])) {
                 });
             });
         </script>
+
+<!--<script>
+    $('.sidebar').affix({
+        offset: {
+                top: 100,
+                bottom: function () {
+                    return (this.bottom = $('.page-header').outerHeight(true))
+                }
+        }
+    })
+</script>-->
 
 </html>

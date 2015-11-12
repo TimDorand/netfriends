@@ -10,17 +10,19 @@ header{
 }
 
 .sidebar{
-    float:right;
-    width: 30%;
     background-color: #337ab7;
     color: white;
-    margin-top: 10%;
     margin-right: 2%;
 }
 
+.affix-top{
+    margin-top:10%;
+}
+.affix{
+    right:5.5%;
+    top:0;
+}
 .row{
-    width: 70%;
-    float:left;
 }
 
 

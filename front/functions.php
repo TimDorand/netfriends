@@ -27,4 +27,36 @@ function addPost($bdd, $titre, $contenu) {
     return $reqpost;
 }
 
+/*AJOUT d'un réponse à un commentaire*/
+function reply($bdd, $id_comment, $auteur, $message) {
 
+    $reqrep = $bdd->prepare("INSERT INTO reply(id_comments, auteur, commentaire) VALUES ('$id_comment','$auteur','$message') ");
+    $reqrep->execute(array($id_comment, $auteur , $message));
+
+    return $reqrep;
+}
+
+
+/*fonction d'inscription*/
+/*
+function signIn($bdd, $pseudo, $password)
+{
+
+    $reqsign = $bdd->prepare("INSERT INTO users(pseudo, password) VALUES ('$pseudo','$password') ");
+    $reqsign->execute(array($pseudo, $password));
+
+    return $reqsign;
+}
+
+
+function connect($bdd, $pseudo)
+{
+
+    $reqco = "SELECT * FROM users WHERE pseudo=".$pseudo;
+    $query = msqli_query($bdd, $reqco);
+    $data = [];
+    while ($row = $query->fetch_assoc()) {
+        $data[] = $row;
+    }
+    return $data;
+}*/
