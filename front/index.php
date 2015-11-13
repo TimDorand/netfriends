@@ -132,10 +132,12 @@ if(!empty($_POST['submit'])) {
     while ($comment = $req1->fetch())
     {
         ?>
+
 <!--SHOW COMMENTS-->
+        <div class="thumbnail">
 <p><strong><?php echo htmlspecialchars($comment['auteur']); ?></strong> le <?php echo $comment['date_commentaire_fr']; ?></p>
 <p><?php echo nl2br(htmlspecialchars($comment['commentaire'])); ?></p>
-
+        </div>
         <?php
         // Récupération des réponse
         $req2 = $bdd->prepare('SELECT interloc, reponse, DATE_FORMAT(date_reponse, \'%d/%m/%Y\') AS date_reponse_fr FROM reply WHERE id_comments = ? ORDER BY date_reponse');
@@ -165,7 +167,7 @@ if(!empty($_POST['submit'])) {
             <input class="form-horizontal" type="text"  name="interloc" placeholder="Author" /><br/>
             <input class="form-horizontal" type="text" size="70" name="reponse" placeholder="Can you reply ?" /><br/>
             <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
-            <input class=" btn-primary" type="submit" name="submit" value="Envoyer" />
+            <input class="btn btn-default" type="submit" name="submit" value="Envoyer" />
         </form>
 
 
@@ -220,15 +222,15 @@ if(!empty($_POST['submit'])) {
 </div>
 
 
-<div class="col-md-3 sidebar" data-spy="affix" data-offset-top="200" style="padding:15px">
+<div class="thumbnail col-md-3 sidebar " data-spy="affix" data-offset-top="200" >
     <div class="caption form-group">
-        <h2>Write a new post</h2>
+        <h2 style="color:white">Write a new post</h2>
         <form method="POST" action="">
             <label>Pseudo</label>
             <input class="form-control" type="text" name="titre" placeholder="Pseudo" /><br/>
             <label>Content</label>
             <textarea class="form-control" type="text" size="70" name="contenu" placeholder="What's on your mind ?" height="50px"></textarea><br/>
-            <input class="form-control" type="submit" name="submitpost" value="Envoyer" />
+            <input class="form-control" type="submit" name="submitpost" value="Send" />
 
         </form>
     </div>
@@ -236,9 +238,12 @@ if(!empty($_POST['submit'])) {
 
 
 
-<footer>
-
+<footer id="footer" style="bottom:0;">
+    <div class="container">
+        <p class="muted credit">Développé par <a href="http://www.timothee-dorand.fr">Timothée Dorand</a> and <a href="http://melissagreu.fr">Melissa Greu</a>. Version 1.1</p>
+    </div>
 </footer>
+
 </body>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

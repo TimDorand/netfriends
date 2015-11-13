@@ -72,6 +72,41 @@ header{
 
 /*Affichage de la reponse*/
 .reply{
-    margin-left:10%;
+    line-height: 15px;
+    background: rgba(43,102,154,0.2) ;
+    width:80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
 
+}
+
+.reply > input{
+    margin-left: 60px;
+}
+
+.reply > label{
+    font-size:15px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.reply > .btn{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+    margin-bottom: 10px;
+    margin-left: 30%;
+}
+
+.reply > .form-horizontal{
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1000px) {
+    .affix {
+        position: relative;
+        right:0;
+        margin:5%;
+    }
 }
