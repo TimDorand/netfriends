@@ -172,7 +172,7 @@ if(!empty($_POST['submit'])) {
                 </div>
                 <div class="col-md-4">
                 <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
-                <input class="btn btn-default" type="submit" name="submit" value="Send" />
+                <input class="btn btn-default" type="submit" name="submit" value="Envoyer" />
                 </div>
              </form>
         </div>

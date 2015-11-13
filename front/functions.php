@@ -39,12 +39,12 @@ function addPost($bdd, $titre, $contenu) {
 
     $prep->execute();
 
-    $result = $bdd->lasInsertId();
+//    $result = $bdd->lasInsertId();
 
     $prep->closeCursor();
     $prep = NULL;
 
-    return $result;
+    
 }
 
 //Ajout d'une réponse dans la base de donnée
