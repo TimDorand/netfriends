@@ -238,7 +238,7 @@ if(!empty($_POST['submit'])) {
 
 
 
-<footer id="footer" style="bottom:0;">
+<footer  style="bottom:0;">
     <div class="container">
         <p class="muted credit">Développé par <a href="http://www.timothee-dorand.fr">Timothée Dorand</a> and <a href="http://melissagreu.fr">Melissa Greu</a>. Version 1.1</p>
     </div>

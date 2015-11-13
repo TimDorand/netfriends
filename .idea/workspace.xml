@@ -25,20 +25,20 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07317073">
-              <caret line="183" column="45" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.36585367">
+              <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-                <marker date="1447409083000" expanded="true" signature="1833:1844" placeholder="..." />
-                <marker date="1447409083000" expanded="true" signature="1975:1986" placeholder="..." />
-                <marker date="1447409083000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
-                <marker date="1447409083000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
-                <marker date="1447409083000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
-                <marker date="1447409083000" expanded="true" signature="6366:6599" placeholder="..." />
-                <marker date="1447409083000" expanded="true" signature="6930:7321" placeholder="..." />
-                <marker date="1447409083000" expanded="true" signature="6967:7321" placeholder="..." />
-                <marker date="1447409083000" expanded="true" signature="7060:7321" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="1833:1844" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="1975:1986" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+                <marker date="1447409437000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+                <marker date="1447409437000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
+                <marker date="1447409437000" expanded="true" signature="6366:6599" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="6930:7321" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="6967:7321" placeholder="..." />
+                <marker date="1447409437000" expanded="true" signature="7060:7321" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -331,15 +331,15 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-            <marker date="1447409083000" expanded="true" signature="1833:1844" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="1975:1986" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
-            <marker date="1447409083000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
-            <marker date="1447409083000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
-            <marker date="1447409083000" expanded="true" signature="6366:6599" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6930:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6967:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="7060:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447409437000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447409437000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
+            <marker date="1447409437000" expanded="true" signature="6366:6599" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6930:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6967:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="7060:7321" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -381,15 +381,15 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-            <marker date="1447409083000" expanded="true" signature="1833:1844" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="1975:1986" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
-            <marker date="1447409083000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
-            <marker date="1447409083000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
-            <marker date="1447409083000" expanded="true" signature="6366:6599" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6930:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6967:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="7060:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447409437000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447409437000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
+            <marker date="1447409437000" expanded="true" signature="6366:6599" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6930:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6967:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="7060:7321" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -493,15 +493,15 @@
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-            <marker date="1447409083000" expanded="true" signature="1833:1844" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="1975:1986" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
-            <marker date="1447409083000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
-            <marker date="1447409083000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
-            <marker date="1447409083000" expanded="true" signature="6366:6599" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6930:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6967:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="7060:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447409437000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447409437000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
+            <marker date="1447409437000" expanded="true" signature="6366:6599" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6930:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6967:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="7060:7321" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -606,20 +606,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07317073">
-          <caret line="183" column="45" selection-start-line="183" selection-start-column="45" selection-end-line="183" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.36585367">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-            <marker date="1447409083000" expanded="true" signature="1833:1844" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="1975:1986" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
-            <marker date="1447409083000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
-            <marker date="1447409083000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
-            <marker date="1447409083000" expanded="true" signature="6366:6599" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6930:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="6967:7321" placeholder="..." />
-            <marker date="1447409083000" expanded="true" signature="7060:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447409437000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447409437000" expanded="true" signature="3732:3871" placeholder="SELECT auteu..reply..." />
+            <marker date="1447409437000" expanded="true" signature="6366:6599" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6930:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="6967:7321" placeholder="..." />
+            <marker date="1447409437000" expanded="true" signature="7060:7321" placeholder="..." />
           </folding>
         </state>
       </provider>
