@@ -61,6 +61,8 @@ if(!empty($_POST['submit'])) {
     $id_comments = $_POST['id_comments'];
     $interloc = $_POST['interloc'];
     $reponse = $_POST['reponse'];
+
+    $reponse =  $_POST['reponse'];
     $errors = [];
 
     if(empty($reponse)) {
@@ -189,7 +191,7 @@ if(!empty($_POST['submit'])) {
                             <label>Auteur</label>
                             <input class="form-control" type="text" name="auteur" placeholder="Auteur" /><br/>
                             <label>Content</label>
-                            <input class="form-control" type="text" size="70" name="commentaire" placeholder="What's on your mind ?" /><br/>
+                            <input class="form-control" type="text" size="70" name="commentaire"  placeholder="What's on your mind ?" /><br/>
                             <input type="hidden" value="<?php echo $post['id']; ?>" name="id_post">
                             <input class="form-control btn-primary" type="submit" name="submitcomm" value="Envoyer" />
                         </form>

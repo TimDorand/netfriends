@@ -22,18 +22,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2195122">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <marker date="1447367157000" expanded="true" signature="1797:1808" placeholder="..." />
-                <marker date="1447367157000" expanded="true" signature="1939:1950" placeholder="..." />
-                <marker date="1447367157000" expanded="true" signature="2065:2216" placeholder="SELECT id, t..billets..." />
-                <marker date="1447367157000" expanded="true" signature="3061:3219" placeholder="SELECT auteu..comments..." />
-                <marker date="1447367157000" expanded="true" signature="3649:3788" placeholder="SELECT auteu..reply..." />
+                <marker date="1447404047000" expanded="true" signature="1833:1844" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="1975:1986" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+                <marker date="1447404047000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+                <marker date="1447404047000" expanded="true" signature="3685:3824" placeholder="SELECT auteu..reply..." />
+                <marker date="1447404047000" expanded="true" signature="6316:6549" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="6876:6888" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="6889:7260" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="6926:7260" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="6999:7260" placeholder="..." />
+                <marker date="1447404047000" expanded="true" signature="7447:7458" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.85365856">
+              <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+              <folding>
+                <marker date="1447406580000" expanded="true" signature="217:310" placeholder="INSERT INTO ..." />
+                <marker date="1447406580000" expanded="true" signature="330:426" placeholder="INSERT INTO ..." />
+                <marker date="1447406580000" expanded="true" signature="880:941" placeholder="INSERT INTO ..." />
+                <marker date="1447406580000" expanded="true" signature="1348:1439" placeholder="INSERT INTO ..." />
+                <marker date="1447406580000" expanded="true" signature="1348:1440" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -49,25 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125">
-              <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-              <folding>
-                <marker date="1447365675000" expanded="true" signature="215:308" placeholder="INSERT INTO ..." />
-                <marker date="1447365675000" expanded="true" signature="511:575" placeholder="INSERT INTO ..." />
-                <marker date="1447365675000" expanded="true" signature="790:862" placeholder="INSERT INTO ..." />
-                <marker date="1447365675000" expanded="true" signature="790:889" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
+            <state vertical-scroll-proportion="0.0">
               <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
@@ -97,9 +103,9 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/front/css/style.css" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/front/functions.php" />
         <option value="$PROJECT_DIR$/front/header.php" />
         <option value="$PROJECT_DIR$/front/index.php" />
+        <option value="$PROJECT_DIR$/front/functions.php" />
       </list>
     </option>
   </component>
@@ -142,8 +148,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,34 +204,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netfriends" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="netfriends" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aubepin.fr" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
@@ -336,16 +324,110 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/front/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447404047000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447404047000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447404047000" expanded="true" signature="3685:3824" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="6316:6549" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6876:6888" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6889:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6926:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6999:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="7447:7458" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <marker date="1447406580000" expanded="true" signature="217:310" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="330:426" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="880:941" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1439" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1440" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <folding>
+            <marker date="1447404047000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447404047000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447404047000" expanded="true" signature="3685:3824" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="6316:6549" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6876:6888" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6889:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6926:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6999:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="7447:7458" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+          <folding>
+            <marker date="1447406580000" expanded="true" signature="217:310" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="330:426" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="880:941" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1439" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1440" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="95" selection-end-column="17" />
-          <folding>
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT id, t..billets..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT auteu..comments..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -377,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -386,10 +467,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <marker date="1447365675000" expanded="true" signature="215:308" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="511:575" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="790:862" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="790:889" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="217:310" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="330:426" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="880:941" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1439" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1440" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -409,12 +491,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <marker date="1447367157000" expanded="true" signature="1797:1808" placeholder="..." />
-            <marker date="1447367157000" expanded="true" signature="1939:1950" placeholder="..." />
-            <marker date="1447367157000" expanded="true" signature="2065:2216" placeholder="SELECT id, t..billets..." />
-            <marker date="1447367157000" expanded="true" signature="3061:3219" placeholder="SELECT auteu..comments..." />
-            <marker date="1447367157000" expanded="true" signature="3649:3788" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447404047000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447404047000" expanded="true" signature="3685:3824" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="6316:6549" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6876:6888" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6889:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6926:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6999:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="7447:7458" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -423,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -431,12 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT id, t..billets..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT auteu..comments..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -451,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -475,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2112676">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -501,31 +579,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8292683">
           <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-          <folding>
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT id, t..billets..." />
-            <marker date="1447365099000" expanded="true" signature="-1:-1" placeholder="SELECT auteu..comments..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125">
-          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-          <folding>
-            <marker date="1447365675000" expanded="true" signature="215:308" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="511:575" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="790:862" placeholder="INSERT INTO ..." />
-            <marker date="1447365675000" expanded="true" signature="790:889" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
@@ -533,15 +592,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2195122">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <marker date="1447367157000" expanded="true" signature="1797:1808" placeholder="..." />
-            <marker date="1447367157000" expanded="true" signature="1939:1950" placeholder="..." />
-            <marker date="1447367157000" expanded="true" signature="2065:2216" placeholder="SELECT id, t..billets..." />
-            <marker date="1447367157000" expanded="true" signature="3061:3219" placeholder="SELECT auteu..comments..." />
-            <marker date="1447367157000" expanded="true" signature="3649:3788" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="1833:1844" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="1975:1986" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="2101:2252" placeholder="SELECT id, t..billets..." />
+            <marker date="1447404047000" expanded="true" signature="3097:3255" placeholder="SELECT auteu..comments..." />
+            <marker date="1447404047000" expanded="true" signature="3685:3824" placeholder="SELECT auteu..reply..." />
+            <marker date="1447404047000" expanded="true" signature="6316:6549" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6876:6888" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6889:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6926:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="6999:7260" placeholder="..." />
+            <marker date="1447404047000" expanded="true" signature="7447:7458" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85365856">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+          <folding>
+            <marker date="1447406580000" expanded="true" signature="217:310" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="330:426" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="880:941" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1439" placeholder="INSERT INTO ..." />
+            <marker date="1447406580000" expanded="true" signature="1348:1440" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
