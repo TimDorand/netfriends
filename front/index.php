@@ -238,10 +238,8 @@ if(!empty($_POST['submit'])) {
 
 
 
-<footer  style="bottom:0;">
-    <div class="container">
+<footer class="col-md-12">
         <p class="muted credit">Développé par <a href="http://www.timothee-dorand.fr">Timothée Dorand</a> and <a href="http://melissagreu.fr">Melissa Greu</a>. Version 1.1</p>
-    </div>
 </footer>
 
 </body>
