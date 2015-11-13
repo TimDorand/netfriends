@@ -38,7 +38,7 @@ header{
     margin-left: 30px;
 }
 
-.btn{
+.caption > .btn{
     width:30%;
     margin-left: 10%;
 }
@@ -71,37 +71,13 @@ header{
 }
 
 /*Affichage de la reponse*/
-.reply{
-    line-height: 15px;
-    background: rgba(43,102,154,0.2) ;
-    width:80%;
-    margin-left: 10%;
-    margin-bottom: 30px;
-
+.replya{
+    margin-left: 2%;
 }
 
-.reply > input{
-    margin-left: 60px;
+.reply input{
+    width:100%;
 }
-
-.reply > label{
-    font-size:15px;
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-.reply > .btn{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:30px;
-    margin-bottom: 10px;
-    margin-left: 30%;
-}
-
-.reply > .form-horizontal{
-    margin-top: 5px;
-}
-
 
 @media (max-width: 1000px) {
     .affix {

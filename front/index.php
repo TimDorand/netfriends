@@ -114,9 +114,9 @@ if(!empty($_POST['submit'])) {
                 <h3><?php echo htmlspecialchars($post['titre']); ?></h3>
                 <p>le <?php echo $post['date_creation_fr']; ?></p>
                 <p><?php echo $post['contenu']; ?></p>
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add comment</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Add comment</button>
 <!--                <button type="button" class="btn btn-default ">Show comments</button>-->
-                <div class=" btn btn-default flip">Show comments</div>
+                <div class="btn btn-default flip"><span class="glyphicon glyphicon-comment"></span> Show comments</div>
 
                 <div class="write">
 
@@ -149,7 +149,7 @@ if(!empty($_POST['submit'])) {
             ?>
 
             <!--SHOW REPLY-->
-<div class="reply">
+<div class="replya">
             <p><strong><?php echo htmlspecialchars($reply['interloc']); ?></strong> le <?php echo $reply['date_reponse_fr']; ?></p>
             <p><?php echo nl2br(htmlspecialchars($reply['reponse'])); ?></p>
 
@@ -162,16 +162,26 @@ if(!empty($_POST['submit'])) {
         $req2->closeCursor();
         ?>
         <!--ADD REPLY--><br/>
-        <form class="reply" method="POST" action="">
-            <label>Reply</label><br/>
-            <input class="form-horizontal" type="text"  name="interloc" placeholder="Author" /><br/>
-            <input class="form-horizontal" type="text" size="70" name="reponse" placeholder="Can you reply ?" /><br/>
-            <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
-            <input class="btn btn-default" type="submit" name="submit" value="Envoyer" />
-        </form>
+        <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+            <form class="reply" method="POST" action="">
+                <div class="col-md-2"><label>Reply</label><br/></div>
+                <div class="col-md-6">
+                <input class="form-horizontal" type="text"  name="interloc" placeholder="Author" /><br/>
+                <input class="form-horizontal" type="text"  name="reponse" placeholder="Can you reply ?" /><br/>
+                </div>
+                <div class="col-md-4">
+                <input type="hidden" value="<?php echo $comment['id']; ?>" name="id_comments">
+                <input class="btn btn-default" type="submit" name="submit" value="Send" />
+                </div>
+             </form>
+        </div>
+        </div>
+        <br/>
 
 
-    <?php
+
+                <?php
         } // Fin de la boucle des commentaires
         $req1->closeCursor();
     ?>
@@ -221,7 +231,7 @@ if(!empty($_POST['submit'])) {
 
 </div>
 
-
+<!--ADD POST-->
 <div class="thumbnail col-md-3 sidebar " data-spy="affix" data-offset-top="200" >
     <div class="caption form-group">
         <h2 style="color:white">Write a new post</h2>
@@ -239,7 +249,7 @@ if(!empty($_POST['submit'])) {
 
 
 <footer class="col-md-12">
-        <p class="muted credit">Développé par <a href="http://www.timothee-dorand.fr">Timothée Dorand</a> and <a href="http://melissagreu.fr">Melissa Greu</a>. Version 1.1</p>
+        <p class="muted credit">Développé par <a href="http://www.timothee-dorand.fr">Timothée Dorand</a> and <a href="http://melissagreu.fr">Melissa Greu</a> et un peu <a href="http://www.jeremie-dahan.fr">Jeremie Dahan</a>. Version 1.1</p>
 </footer>
 
 </body>
